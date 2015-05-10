@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <div class="col-xs-3">
+<header>
+  <div class="col-xs-3">
+    <%= link_to root_path, :class => 'logo' do %>
      <div class="circle">
       <br />
       You Know
@@ -16,14 +17,15 @@
       You Need
       <br />
       to Code
-    </div>
+     </div>
+    <% end %>
   </div>
 
     <div class="col-xs-4 slogan">
-      Splurting out unsolicited quotes since 2015
+      Splurting out fun quotes from two of the most quotable masters of English-language fiction
     </div>
     <div class="col-xs-5 links">
-      <%= link_to 'Contribute', '#' %>
+      <%= link_to 'Contribute', new_quote_path %>
       <%= link_to 'About', '#' %>
   </div>
   </header>
@@ -37,7 +39,7 @@
  <div class="footer">
     <div class="container">
         <div class="col-xs-6">
-          <%= link_to "This isn't enough, I need more", "#", :class => 'next-quote' %>
+          <%= link_to "This isn't enough, I need more", root_path, :class => 'next-quote' %>
         </div>
          <div class="col-xs-6 footer-blurb">
           Proudly hacked in Brooklyn, NY by Yury<br />
